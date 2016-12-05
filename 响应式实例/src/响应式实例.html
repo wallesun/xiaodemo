@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>响应式实例</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+	</style>
+
+</head>
+<body>
+	<!-- 导航 -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand" style="margin-top:10px;padding:0"><img src="img/yidianlogo.jpg" alt=""></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">切换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right navbar-style" >
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>INESA智慧城市</a></li> 
+					<li><a href="#"><span class="glyphicon glyphicon-list"></span>行业解决方案</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-fire"></span>智能硬件</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-sign"></span>投资者关系</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-sign1"></span>关于我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- 轮播图 -->
+<div id="myCarousel" class="carousel slide">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active" style="background:black">
+			<a href="#"><img src="img/hd1.jpg" alt="第一张" /></a>
+		</div>
+		<div class="item" style="background:black">
+			<a href="#"><img src="img/hd2.jpg" alt="第二张" /></a>
+		</div>
+		<div class="item" style="background:black">
+			<a href="#"><img src="img/hd3.jpg" alt="第三张" /></a>
+		</div>
+		<a href="#myCarousel" data-slide="prev" class="carousel-control left">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a href="#myCarousel" data-slide="next" class="carousel-control right">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+</div>
+
+<!-- 网页正文 -->
+<div class="content">
+	<div class="container">
+		<h2 class="con-h2">『行业解决方案』</h2>
+		<div class="row">
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img class="media-object" src="img/01.jpg" alt="智慧建筑">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">智慧建筑</h4>
+						<p class="text-muted">智慧建筑集合多种智能应用，包含智慧照明、能效管理、融合会议、一卡通、信息发布、移动办公、视频监控等多个子系统，利用统一信息化云平台将信息进行汇总、分析、处理和优化，从而实现建筑体安全、绿色、高效的有机融合。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img class="media-object" src="img/02.jpg" alt="智慧交通">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">智慧交通</h4>
+						<p class="text-muted">基于上海仪电创新推出的智能路灯网商业模式，通过智能调度、智能停车、自动售检票、信息发布、流量统计分析等多系统应用，针对公交、轨交、社会车辆等不同对象，实现交通信息采集、数据通信传输、电子控制和计算机处理，同时将采集的数据和信息传输到i-stack云平台进行综合分析、处理和优化后，为用户提供全面的交通信息服务体验。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img class="media-object" src="img/03.jpg" alt="平安城市">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">平安城市</h4>
+						<p class="text-muted">基于全系列的安防硬软件产品库，利用技防、物防和人防等系统有效融合并进行综合管理，同时通过人脸识别、声纹识别、热成像等前沿智能分析技术，广泛应用于银行、公安、安全生产监控等多个领域，科学而有效的保障城市安全。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img class="media-object" src="img/04.jpg" alt="智慧溯源">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">智慧溯源</h4>
+						<p class="text-muted">基于国家改革和完善商品安全监管体制机制以及物联网产业发展规划，以成熟技术兼容已有局部应用，以“安全、方便、幸福、安居”为宗旨，打造基于物联网技术的 “INESA智慧溯源协同平台”体系，以追溯平台为核心...</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img class="media-object" src="img/05.jpg" alt="智慧水务">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">智慧水务</h4>
+						<p class="text-muted">利用移动互联网、物联网和云计算等技术，从原水、生产、输配、排放、处理等各环节实现全过程控制与实时监测，实施智慧的水管理系统，有效控制漏损，降低产销差，同时基于集团旗下核心科学分析仪器等硬软件产品实现对水质的监测和检测。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img class="media-object" src="img/06.jpg" alt="智慧政务">
+						</a>
+					</div>
+					<div class="media-body media-right">
+						<h4 class="media-heading">智慧政务</h4>
+						<p class="text-muted">通过IDC数据中心的云存储、云灾备、云主机和元安全等服务以及公务网、政务网和城域网等硬件系统布设和系统运维，同时利用软件系统能力整合政府各部门信息系统，有效解决信息孤岛问题，实现政府多部门信息资源充分共享，实现一站办理、一网连通、一号服务、一卡通行。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 页脚 -->
+<footer id="footer" class="text-muted">
+	<div class="container">
+		<p class="left">网站地图 | 联系我们：<img src="img/weixin.gif" alt="微信">
+		</p>
+		<p class="right">上海仪电（集团）有限公司版权所有技术支持<br />版权所有Copyright20000-2015 沪ICP备10218396号-2</p>
+	</div>
+</footer>
+<script>
+	$(function(){
+		$('#myCarousel').carousel({
+			interval : 3000,
+		});
+	/*	$('.carousel-control').css('line-height',$('.carousel-inner img').height() + 'px');
+		$(window).resize(function(){
+			var $height = $('.carousel-inner img').eq(0).height() ||
+						$('.carousel-inner img').eq(1).height() || 
+						$('carousel-inner img').eq(2).height();
+						console:log($('carousel-inner img').height());
+			$('carousel-control').css('line-height',$height + 'px');
+		});
+		$(window).resize(function(){
+			var $height = $('.carousel-inner img').eq(0).height() ||
+						$('.carousel-inner img' ).eq(1).height() ||
+						$('.carousel-inner img').eq(2).height();
+							console.log($height);
+			$('.carousel-control').css('line-height',$height + 'px');
+		});*/
+	})
+		
+	</script>
+</body>
+</html>

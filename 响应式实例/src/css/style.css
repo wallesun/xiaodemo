@@ -1,0 +1,82 @@
+@charset "utf-8";
+navbar-collapse ul li span {
+	margin-right:6px;
+}
+.navbar-style {
+	margin-left:30px;
+	margin-top:4px;
+}
+.navbar-style span {
+	margin-right:6px;
+}
+#myCarousel {
+	margin:50px 0 0 0;
+}
+.carousel-inner .item img{
+	margin:0 auto;
+}
+.con-h2 {
+	font-size: 30px;
+	text-align:center;
+	color:black;
+
+}
+.content {
+	margin-top:30px;
+}
+.content .media-heading {
+	margin:10px 0 20px 0;
+	font-weight: bold;
+}
+.content .text-muted {
+	color:#999;
+	font-size: 14px;
+}
+.content .media {
+	margin:10px 0 20px 0;
+}
+.content .col {
+	margin-top:20px;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+#footer {
+	background:black;
+}
+#footer .left {
+	line-height:30px;
+}
+
+/* 小屏幕（平板，大于等于768px） */
+@media (min-width:768px){
+	.media-body h4 {
+		font-size: 22px;
+	}
+	.media-body p {
+		font-size: 14px;
+	}
+}
+
+/* 中等屏幕（桌面显示器，大于等于992px） */
+@media (min-width:992px){
+	.media-body h4 {
+		font-size: 24px;
+	}
+	.media-body p {
+		font-size: 16px;
+	}
+}
+
+/* 大屏幕（大桌面显示器，大于等于1200px） */
+@media (min-width:1200px) {
+	.media-body h4 {
+		font-size: 26px;
+	}
+	.media-body p {
+		font-size: 18px;
+	}
+}
