@@ -1,0 +1,21 @@
+*{
+	margin:0;
+	padding:0;
+}
+#div1 {
+	width:200px;
+	height:200px;
+	background-color:red;
+	position:absolute;
+	top:150px;
+}
+input {
+	width:50px;
+	height:30px;
+	line-height:20px;
+	background-color: #555;
+	color:#fff;
+	border:none;
+	text-align:center;
+	margin:50px;
+}
