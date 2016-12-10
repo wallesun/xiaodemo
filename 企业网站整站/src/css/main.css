@@ -1,0 +1,478 @@
+* {
+	margin:0;
+	padding:0;
+}
+li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+/* 头部开始 */
+.header {
+	width:1100px;
+	height:104px;
+	position:relative;
+	margin:0 auto;
+}
+.header .header-logo {
+	width:266px;
+	height:88px;
+	position:absolute;
+	left:0;
+	top:16px;
+}
+.header .header-tel {
+	width:166px;
+	height:34px;
+	position:absolute;
+	right:0;
+	top:12px;
+	
+}
+.header-tel i {
+	display:block;
+	position:absolute;
+	width:27px;
+	height:27px;
+	background:url(../img/icon.png) no-repeat left 0;
+}
+.header-tel p {
+	margin-left:38px;
+	font-size: 12px;
+}
+.header-tel p span {
+	color:#00b3e1;
+	font-weight: bold;
+	font-size: 20px;
+}
+.header .nav {
+	width:690px;
+	height:58px;
+	position:absolute;
+	right:0;
+	top:46px;
+}
+.header .nav li {
+	margin-top:14px;
+	display:inline-block;
+	padding:4px 19px;
+	font-size: 14px;
+}
+.header .nav li:hover a {
+	color:#ff7e00;
+}
+.header .nav li a{
+	color:#222;
+}
+/* 头部结束 */
+
+
+/* 顶部轮播图开始 */
+.hd-banner {
+	width:100%;
+	height:574px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+}
+.hd-banner ul {
+	width:8000px;
+	position:absolute;
+}
+.hd-banner ul li {
+	width:1920px;
+	height:574px;
+	float:left;
+}
+.hd-banner p {
+	width:100%;
+	text-align:center;
+	position:absolute;
+	bottom:10px;
+}
+.hd-banner p span {
+	display:inline-block;
+	width:20px;
+	height:8px;
+	background:rgba(0,0,0,0.6);
+	margin-right:6px;
+}
+.hd-banner p span.on {
+	background:rgba(255,255,255,0.6);
+}
+/* 顶部轮播图结束 */
+
+/* 关于开始 */
+.box {
+	width:1100px;
+	height:300px;
+	margin:0 auto;
+}
+.box .text {
+	width:318px;
+	height:110px;
+	float:right;
+	margin:40px 0 0 180px;
+}
+.box h2 {
+	margin-bottom:10px;
+}
+.box .box-l {
+	width:532px;
+	height:186px;
+	margin-top:12px;
+	float:left;
+	position:relative;
+}
+.box-l i, 
+.box-r i {
+	display:block;
+	position:absolute;
+	top:60px;
+	left:56px;
+	width:72px;
+	height:72px;
+	background:url(../img/icon.png) no-repeat;
+}
+.box-l:hover, 
+.box-r:hover{
+	
+	background:#00408f;
+}
+.box-l:hover h2,
+.box-r:hover h2 {
+	color:#f5f5f5;
+}
+.box-l:hover i{
+	background-position:left -99px;
+}
+.box-r:hover i{
+	background-position:left -243px;
+}
+.box-l i {
+	background-position:left -27px;
+}
+.box-r i {
+	background-position:left -171px;
+} 
+.box .box-r {
+	position:relative;
+	width:532px;
+	height:186px;
+	margin-top:12px;
+	border:1px solid #eee;
+	float:right;
+}
+
+/* 关于区域结束 */
+
+/* 盐湖风光开始 */
+.banner {
+	width:100%;
+	height:630px;
+	background-color:#f2f4f6;
+	overflow:hidden;/* 避免和子元素中块级元素合并margin值 */
+}
+.toptitle {
+	width:1100px;
+	height:62px;
+	margin:72px auto;
+	background:url(../img/scenerybg.png) repeat-x;
+	background-position:left 12px;
+}
+.toptitle h3 {
+	width:124px;
+	height:24px;
+	margin:0 auto;
+	text-align:center;
+	background:#f2f4f6;
+}
+.toptitle p {
+	font-weight: bold;
+	text-align:center;
+	text-transform:uppercase;
+	color:#888;
+}
+.toptitle p span{
+	display:inline-block;
+	text-align:center;
+	width:50px;
+	border-bottom:1px solid #18ddb6;
+}
+.banner .wrap {
+	width:1100px;
+	margin:34px auto;
+	position:relative;
+}
+.content {
+	width:1100px;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+}
+.banner .content ul {
+	width:5000px;
+	height:300px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.banner .content li {
+	width:268px;
+	height:300px;
+	margin-right:7px;
+	background:green;
+	float:left;
+	position:relative;
+}
+.banner .content li a {
+	display:block;
+	width:268px;
+	height:300px;
+	position:absolute;
+	background:rgba(0,0,0,0.5);
+	top:300px;
+	left:0;
+	text-align:center;
+	line-height:268px;
+	font-size: 30px;
+	color:rgba(255,255,255,0.7);
+	transition:0.3s;
+}
+.banner .content li:hover a {
+	top:0;
+}
+.wrap .arrow-l,
+.wrap .arrow-r {
+	display:block;
+	position:absolute;
+	width:28px;
+	height:46px;
+	top:127px;
+	background:url(../img/icon.png) no-repeat;
+	cursor:pointer;
+}
+.wrap .arrow-l {
+	background-position:left -320px;
+	left:-56px;
+}
+.wrap .arrow-r {
+	background-position:-28px -320px;
+	right:-56px;
+}
+/* 盐湖风光结束 */
+
+/* 新闻区域开始 */
+.news {
+	width:1100px;
+	height:630px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.news-box {
+	width:1100px;
+	height:342px;
+	margin:44px auto;
+}
+.news-box-l {
+	width:660px;
+	height:340px;
+	float:left;
+	position:relative;
+	border:1px solid #d0d0d0;
+}
+.news-box-l .confidence {
+	width:180px;
+	height:340px;
+	background:#3f434c;
+	float:left;
+	overflow:hidden;
+}
+.news-box-l .confidence>p {
+	text-transform:uppercase;
+	color:#cccdcf;
+	font-size: 18.77px;
+	margin:16px 22px;
+}
+.news-box-l .confidence>p span {
+	display:block;
+	color:#fff;
+	font-size: 20px;
+	margin-top:16px;
+}
+.confidence li {
+	width:150px;
+	height:90px;
+	background-color: #00408f;
+	margin-top:10px;
+	margin-left:20px;
+	position:relative;
+	cursor:pointer;
+}
+.confidence li:hover .nav,
+.confidence li:active .nav {
+	display:block;
+} 
+.confidence li i {
+	position:absolute;
+	top:30px;
+	left:20px;
+	display:block;
+	width:28px;
+	height:30px;
+	background:url(../img/icon.png) no-repeat
+}
+.confidence li p {
+	position:absolute;
+	top:30px;
+	left:70px;
+	font-size: 16px;
+	color:#fff;
+	text-transform:uppercase;
+}
+.confidence li p span {
+	color:#80d9f0;
+
+}
+.confidence li.top i {
+	background-position:left -370px;
+}
+.confidence li.bottom i {;
+	background-position:left -403px;
+}
+.confidence li .nav {
+	width:160px;
+	height:90px;
+	background:#00b3e1;
+	position:absolute;
+	display:none;
+	top:0;
+	left:0;
+}
+.confidence-content {
+	width:478px;
+	height:340px;
+	position:absolute;
+	top:0;
+	right:0;
+	border-left:2px solid #00b3e1;
+}
+.confidence2 {
+	display:none;
+}
+.confidence-content .text1 {
+	margin-left:24px;
+	margin-top:30px;
+	width:440px;
+}
+.confidence-content .text1 h5 {
+	color:#33c2e7;
+	font-size: 14px;
+}
+.confidence-content .text1 p {
+	font-size: 12px;
+	padding:16px 0;
+	text-indent:2em;
+}
+.confidence-content .text1 li {
+	padding:16px 0;
+	font-size: 14px;
+	position:relative;
+	list-style:disc;
+}
+.confidence-content .text1 li span {
+	position:absolute;
+	display:inline-block;
+	right:0;
+}
+.confidence-content .text1 p a {
+	color:#33c2e7;
+}
+.confidence-content .more {
+	width:106px;
+	padding:6px;
+	border:1px solid #33c2e7;
+	text-align:center;
+	float:right;
+	margin:10px;
+}
+.confidence-content .more a {
+	color:#33c2e7;
+}
+.news-box-r {
+	width:420px;
+	height:340px;
+	float:right;
+	border:1px solid #d0d0d0;
+	overflow:hidden;
+}
+.news-box-r .vedio {
+	width:100%;
+	height:274px;
+}
+.news-box-r video {
+	width:420px;
+	height:274px;
+}
+.news-box-r p {
+	text-align:center;
+	font-size: 16px;
+	margin-top:20px;
+}
+.news-box-r span {
+	text-transform:uppercase;
+	font-size: 12px;
+	color:#9fa1a5;
+}
+/* 新闻区域结束 */
+
+
+/* 页脚开始 */
+.footer {
+	width:100%;
+	height:250px;
+	background:#00b3e1;
+}
+.footer .ft-logo {
+	width:100%;
+	height:218px;
+}
+.footer .ft-logo .ft-wrap {
+	width:1100px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.footer .ft-logo .ft-info img {
+	padding:40px 0;
+	float:left;
+}
+.footer .ft-r-logo img {
+	float:right;
+	margin:60px 100px;
+}
+
+
+.footer .brand {
+	width:100%;
+	height:34px;
+	background:#00408f;
+}
+.footer .brand-wrap {
+	margin:0 auto;
+	width:1100px;
+	height:34px;
+}
+.brand-wrap select {
+	width:100px;
+	height:20px;
+	margin:7px 0;
+}
+.brand-wrap p {
+	font-size: 14px;
+	float:right;
+	margin-right:80px;
+	line-height:34px;
+	color:#ccc;
+}
+/* 页脚结束 */
