@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟效果</title>
+	<style>
+		* {
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		#wrap {
+			width:150px;
+			height:150px;
+			border-radius:50%;
+			border:2px solid #000;
+			margin:100px auto;
+			position:relative;
+			background:url(img/6.jpg) -50px -50px no-repeat;
+		}/* 
+		#ul1 {
+			position:absolute;
+			left:75px;
+			top:75px;
+			background:red;
+			width:5px;
+			height:5px;
+		
+		} */
+		/* origin是相对于自身来说的 */
+		#ul1 li {
+			width:2px;
+			height:3px;
+			background:#000;
+			position:absolute;
+			left:75px;
+			-webkit-transform-origin:0 75px;
+			transform-origin:0 75px;
+		}
+		#ul1 li:nth-of-type(5n+1){
+			height:6px;
+			background:#000;
+		}
+		#hour {
+			width:4px;
+			height:30px;
+			position:absolute;
+			left:73px;
+			top:45px;
+			background:#000;
+			-webkit-transform-origin:2px 30px;
+			transform-origin:2px 30px;
+		}
+		#min {
+			width:2px;
+			height:40px;
+			position:absolute;
+			left:74px;
+			top:35px;
+			background:grey;
+			-webkit-transform-origin:1px 40px;
+			transform-origin:1px 40px;
+		}
+		#sec {
+			width:1px;
+			height:50px;
+			background:red;
+			position:absolute;
+			left:75px;
+			top:25px;
+			-webkit-transform-origin:0 50PX;
+			transform-origin:0 50PX;
+		}
+		#ico {
+			width:8px;
+			height:8px;
+			border-radius:50%;
+			position:absolute;
+			left:71px;
+			top:71px;
+			background:#000;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var oWrap = document.getElementById('wrap');
+			var oUl = document.getElementById('ul1');
+			var oMin = document.getElementById('min');
+			var oHour = document.getElementById('hour');
+			var oSec = document.getElementById('sec');
+			var aLi = document.createElement('li');
+			toLi(oUl);
+			toMove(oHour,oMin,oSec);
+			setInterval(function(){
+				toMove(oHour,oMin,oSec);
+			} ,1000);
+			function toMove(oHour,oMin,oSec){
+				var oDate = new Date();
+				var oS = oDate.getSeconds();
+				var oM = oDate.getMinutes() + oS/60;
+				var oH = oDate.getHours()+oM/60;
+				oSec.style.WebkitTransform = 'rotate(' + (oS * 6) + 'deg)';
+				oMin.style.WebkitTransform = 'rotate(' + (oM * 6) + 'deg)';
+				oHour.style.WebkitTransform = 'rotate(' + (oH * 360/12) + 'deg)'
+
+
+			}
+
+			//往表盘中加入刻度
+			function toLi(obj){
+				var sHtml = "";
+				var iDeg = 6;
+				for(var i = 0;i<60;i++){
+					sHtml += '<li style="-webkit-transform: rotate(' + iDeg * i + 'deg)"></li>';
+				}
+				obj.innerHTML = sHtml;
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul id="ul1"></ul>
+		<div id="hour"></div>
+		<div id="min"></div>
+		<div id="sec"></div>
+		<div id="ico"></div>
+	</div>
+</body>
+</html>

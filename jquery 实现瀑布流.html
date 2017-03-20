@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery 实现瀑布流</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		#ul1 {
+			width:988px;
+			margin:10px auto;
+		}
+		#ul1 li {
+			width:235px;
+			margin-right:10px;
+			float:left;
+		}
+		#ul1 li div{
+			width:225px;
+			padding:5px;
+			border:1px solid #000;
+			margin-top:10px;
+		}
+		#ul1 li div img {
+			display:block;
+			width:225px;
+		}
+		#ul1 li div p{
+			color:#000;
+			padding:4px;
+			font-size: 12px;
+		}
+	</style>
+	<script src = "js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var iPage = 1;
+			var b = true;
+			$.ajax({
+				url:"getPics.php",
+				dataType:"json",
+				data:{
+					cpage:iPage
+				},
+				success:function getList(response,status,xhr){
+					var oUl = $('#ul1');
+					var aLi = $('li');
+					var iLen = response.length;
+					for(var i=0;i<iLen;i++){
+						var _index = getShort();
+						var oImg = $('<img src="' + response[i].preview + '"alt = "图片">');
+						var oDiv = $('<div></div>');
+						oDiv.append(oImg);
+						var oP = $('<p></p>');
+						oP.html(response[i].title);
+						oDiv.append(oP);
+						aLi.eq(_index).append(oDiv);
+					}
+					b = true;
+				}
+			});
+
+			//当页面滑动到最下边时候，加载下一页图片
+			/*$(window).scroll(function(){
+				var _index = getShort();
+				var aLi = $('li');
+				var oLi = aLi.eq(_index);
+				var scrollTop = $(document).scrollTop();
+				if(oLi.offset().top + oLi.height() < scrollTop + $(window).height()){
+					if(b){
+						b = false;
+						iPage++;
+						getList();
+					}
+				}
+			}) */
+
+
+			//获取最短的li的索引
+			function getShort(){
+				var index = 0;
+				var aLi = $('li');
+				var iH = aLi.eq(index).height();
+				for(var i=0;i<aLi.length;i++){
+					if(aLi.eq(i).height()<iH){
+						iH = aLi.eq(i).height();
+						index = i;
+					}
+				}
+				return index;
+			}
+		})
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

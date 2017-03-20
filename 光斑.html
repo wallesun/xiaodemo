@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>光斑</title>
+	<style>
+		.box {
+			width:300px;
+			height:300px;
+			font-size: 120px;
+			font-weight: bold;
+			color:rgba(0,0,0,0);
+			border:20px dotted #333;
+			margin:100px auto;
+			padding:20px;
+			background:-webkit-linear-gradient(-30deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 170px,rgba(255,255,255,1) 190px,rgba(255,255,255,1) 200px,rgba(255,255,255,0) 220px) no-repeat -200px 0,url(img/1.jpg);
+			background-size:100% 100%;
+			transition:0.5s;
+			-webkit-background-origin:content-box;/* 现在浏览器必须加上-box */
+			/* -webkit-background-clip:padding-box;现在浏览器必须加上-box,clip是控制背景显示位置的，默认从border开始显示 */
+			-webkit-background-clip:text;
+		}
+		.box:hover {
+			background-position:300px 0,-200px 0;
+			background-size:120% 120%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">孙大征</div>
+</body>
+</html>
