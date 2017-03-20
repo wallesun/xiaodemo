@@ -4655,29 +4655,37 @@
 					document.documentElement.scrollTop = document.body.scrollTop = oslidTop - document.documentElement.clientHeight;
 				}
 			}*/
+
+
 			aDivslid[1].onclick = function(){
 				clearInterval(slidTimer);
 				Position(oHealth);
+				
 			}
 			aDivslid[2].onclick = function(){
 				clearInterval(slidTimer);
 				Position(oEle);
+				
 			}
 			aDivslid[3].onclick = function(){
 				clearInterval(slidTimer);
 				Position(oOutdoor);
+				
 			}
 			aDivslid[4].onclick = function(){
 				clearInterval(slidTimer);
 				Position(oHome);
+				
 			}
 			aDivslid[5].onclick = function(){
 				clearInterval(slidTimer);
 				Position(oKid);
+				
 			}
 			aDivslid[6].onclick = function(){
 				clearInterval(slidTimer);
 				Position(oBeauty);
+				
 			}
 			aDivslid[7].onclick = function(){
 				clearInterval(slidTimer);
@@ -4688,10 +4696,15 @@
 					var oslidSpeed = (oslidScrollTop - oslidScroll)/8;//定义移动速度
 					oslidSpeed = oslidSpeed < 0 ? Math.floor(oslidSpeed) : Math.ceil(oslidSpeed);
 					document.documentElement.scrollTop = document.body.scrollTop = oslidScroll + oslidSpeed;
+					if(oslidSpeed == 0){
+						clearInterval(slidTimer);
+					}
 				},30)
+
+				
 			}
 			/*点击侧边栏定位到相应位置*/
-			function Position(obj){
+			function Position(obj,ev){
 				slidTimer = setInterval(function(){
 					var oslidTop = obj.offsetTop + obj.offsetParent.offsetTop + obj.offsetHeight/2;
 					var oslidScroll = document.documentElement.scrollTop || document.body.scrollTop;//获得当前滚动条位置
@@ -4699,14 +4712,19 @@
 					var oslidSpeed = (oslidScrollTop - oslidScroll)/8;//定义移动速度
 					oslidSpeed = oslidSpeed < 0 ? Math.floor(oslidSpeed) : Math.ceil(oslidSpeed);
 					document.documentElement.scrollTop = document.body.scrollTop = oslidScroll + oslidSpeed;
+					if(oslidSpeed == 0){
+						clearInterval(slidTimer);
+					}
 				},30)
 				 
 			}
+			
 			//滚动到固定位置后，左侧边栏出现
 			//以下方法防止给window加多个scroll时候冲突
 			window.addEventListener('scroll',function(){
 				var slidlsTop = document.documentElement.scrollTop || document.body.scrollTop;
 				var slidlCH = document.documentElement.clientHeight/2;
+				console.log(slidlsTop);
 				if( slidlCH < slidlsTop ){
 					oSlidl.style.width = '41px';
 					oSlidl.style.height = '378px';
@@ -4760,7 +4778,6 @@
 				}
 
 			}
-
 
 
 
