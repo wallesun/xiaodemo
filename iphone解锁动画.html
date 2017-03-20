@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iphone解锁动画</title>
+	<style>
+		body{
+			background:#333;
+		}
+		.box {
+			width:500px;
+			padding:50px;
+			margin:100px auto;
+			background:-webkit-linear-gradient(-40deg, rgba(255,255,255,0) 0,rgba(255,255,255,0) 300px,rgba(255,255,255,1) 350px,rgba(255,255,255,1) 400px,rgba(255,255,255,0) 250px ) -450px 0 no-repeat;
+			color:rgba(255,255,255,0.5);
+			font-size: 120px;
+			font-weight: bold;
+			-webkit-background-clip:text;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var oDiv = document.getElementById('box');
+			var iLeft = -400;
+			function Move(){
+				Timer = setInterval(function(){
+							if(iLeft == 300){
+								iLeft = -450;
+								clearInterval(Timer);
+							}
+							iLeft+=10;
+							oDiv.style.backgroundPosition = iLeft + 'px 0px';
+						},20)
+
+			}
+			Move();
+			setInterval(function(){
+				Move();
+			} ,4000)
+			/*oDiv.onmouseout = function(){
+				clearInterval(Timer);
+				oDiv.style.backgroundPosition = -400 + 'px 0px';
+				iLeft = -400;
+			}*/
+		}
+	</script>
+</head>
+<body>
+	<div id="box" class="box">滑动解锁</div>
+</body>
+</html>
